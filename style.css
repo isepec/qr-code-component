@@ -1,0 +1,96 @@
+/* ===== General ===== */
+:root {
+    --dark-max: hsl(218, 44%, 22%);
+    --dark-min: hsl(220, 15%, 55%);
+
+    --light-min: hsl(212, 45%, 89%);
+    --light-max: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: var(--light-min);
+    font-family: 'Outfit', sans-serif;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ===== Card (Main) ===== */
+.card {
+    background: var(--light-max);
+
+    width: 20rem;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1.5rem;
+
+    box-shadow: 0 .125rem .25rem hsla(0, 0%, 0%, 25%);
+
+    transition: transform .5s, box-shadow .5s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 .5rem 1rem hsla(0, 0%, 0%, 5%);
+}
+
+.card__img img{
+    border-radius: 0.75rem;
+}
+
+.card__text {
+    padding: 1.5rem 1rem 1rem;
+}
+
+.card__title {
+    color: var(--dark-max);
+    font-size: 1.35rem;
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+    margin-bottom: .8em;
+}
+
+.card__description {
+    color: var(--dark-min);
+    font-size: 0.9375rem;
+    text-align: center;
+    margin-bottom: 0.625em;
+}
+
+
+/* ===== Footer ===== */
+footer {
+    font-size: .7rem;
+    text-align: center;
+
+    width: 18em;
+    margin: 1em auto 3em;
+}
+
+@media (min-width: 800px){
+    footer {
+        position: absolute;
+        bottom: 0.6rem;
+        left: 0;
+        right: 0;
+    }
+}
