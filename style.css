@@ -52,6 +52,14 @@ img {
     box-shadow: 0 .5rem 1rem hsla(0, 0%, 0%, 5%);
 }
 
+/* I've disabled animation on mobile devices because it could lead to jittery behaviour on touch screens. */
+@media (max-width: 999px) {
+    .card:hover {
+        transform: scale(1);
+        box-shadow: 0 .125rem .25rem hsla(0, 0%, 0%, 25%);
+    }
+}
+
 .card__img img{
     border-radius: 0.75rem;
 }
